@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class drag : MonoBehaviour
 {
     public Canvas canvas;
-    public bool boo;
+    bool shmove = false;
 
     public void MoveAround(BaseEventData data)
     {
@@ -14,7 +14,7 @@ public class drag : MonoBehaviour
 
         if (pointerData.position.y < 70)
         {
-            boo= true;
+            shmove = false;
             Vector2 position;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 (RectTransform)canvas.transform,
@@ -23,14 +23,28 @@ public class drag : MonoBehaviour
                 out position);
             transform.position = canvas.transform.TransformPoint(position);
 
-            boo = false;
         }
         Debug.Log(pointerData.position.y);
     }
 
     public void Update()
     {
-        Debug.Log(boo);
+        if (Input.GetMouseButtonUp(0))
+        {
+            shmove = true;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (shmove == true)
+        {
+            Shmove();
+        }
+    }
+
+    void Shmove()
+    {
+        transform.localPosition = Vector2.Lerp(transform.localPosition, new Vector2(-18, -240), 1*Time.deltaTime);
     }
 
 }
