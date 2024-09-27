@@ -8,10 +8,14 @@ using UnityEngine.Video;
 
 public class gameFunctions : MonoBehaviour
 {
-    public VideoClip high;
-    public VideoClip low;
+    public VideoClip fast1;
+    public VideoClip smart1;
 
     public VideoPlayer[] one;
+
+    public GameObject[] options;
+
+    public string oneIs;
 
     // Start is called before the first frame update
     void Start()
@@ -24,17 +28,20 @@ public class gameFunctions : MonoBehaviour
     {
         
     }
-    
-    public void Switch()
-    {
-        one[0].clip = high;
-    }
 
     public void PlayVideo()
     {
-        for (int i = 0; i < one.Length; i++)
+        if (oneIs != "")
         {
-            one[i].Play();
+            if (oneIs == "Smart")
+            {
+                one[0].clip = smart1;
+            }
+            if (oneIs == "Fast")
+            {
+                one[0].clip = fast1;
+            }
+            one[0].Play();
         }
     }
 }
