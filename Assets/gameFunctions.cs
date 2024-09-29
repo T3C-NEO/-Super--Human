@@ -166,7 +166,7 @@ public class gameFunctions : MonoBehaviour
             {
                 Debug.Log(2);
                 string videoPath;
-                videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, blackSmart);
+                videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, youDidIt);
                 vids[0].url = videoPath;
                 vids[1].url = videoPath;
                 vids[2].url = videoPath;
