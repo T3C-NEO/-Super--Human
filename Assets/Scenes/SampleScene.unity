@@ -265,7 +265,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5422f97dcc425d64abdc003a6a0ad624, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bc249bd0b6c7c24ca9bfd8a487dcda9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2945,13 +2945,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenSpeedy: green fast.mp4
   greenSmart: green smart.mp4
+  greenSneak: green sneak.mp4
   orangeSpeedy: orange fast.mp4
   orangeSmart: orange smart.mp4
+  orangeSneak: orange sneak.mp4
   blueSpeedy: blue fast.mp4
   blueSmart: blue smart.mp4
+  blueSneak: blue sneak.mp4
   blackSpeedy: black fast.mp4
   blackSmart: black fast.mp4
-  youDidIt: blue smart.mp4
+  blackSneak: black sneak.mp4
+  youDidIt: Happy Birthday Confetti.mp4
   badge: {fileID: 974235422}
   vids:
   - {fileID: 990449097}

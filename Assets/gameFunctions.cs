@@ -10,12 +10,16 @@ public class gameFunctions : MonoBehaviour
 {
     [SerializeField] string greenSpeedy;
     [SerializeField] string greenSmart;
+    [SerializeField] string greenSneak;
     [SerializeField] string orangeSpeedy;
     [SerializeField] string orangeSmart;
+    [SerializeField] string orangeSneak;
     [SerializeField] string blueSpeedy;
     [SerializeField] string blueSmart;
+    [SerializeField] string blueSneak;
     [SerializeField] string blackSpeedy;
     [SerializeField] string blackSmart;
+    [SerializeField] string blackSneak;
 
     [SerializeField] string youDidIt;
 
@@ -65,6 +69,11 @@ public class gameFunctions : MonoBehaviour
                     videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, orangeSpeedy);
                     vids[1].url = videoPath;
                 }
+                else if (twoIs == "Sneak")
+                {
+                    videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, orangeSneak);
+                    vids[1].url = videoPath;
+                }
                 vids[1].Play();
                 thumbs[1].SetActive(false);
                 twoStarted = true;
@@ -92,6 +101,11 @@ public class gameFunctions : MonoBehaviour
                     videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, blueSpeedy);
                     vids[2].url = videoPath;
                 }
+                else if (thrIs == "Sneak")
+                {
+                    videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, blueSneak);
+                    vids[2].url = videoPath;
+                }
                 vids[2].Play();
                 thumbs[2].SetActive(false);
                 thrStarted = true;
@@ -113,14 +127,19 @@ public class gameFunctions : MonoBehaviour
             {
                 fourOkayToStartSmileFace = false;
                 string videoPath;
-                if (thrIs == "Smart")
+                if (fouIs == "Smart")
                 {
                     videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, blackSmart);
                     vids[3].url = videoPath;
                 }
-                else if (thrIs == "Fast")
+                else if (fouIs == "Fast")
                 {
                     videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, blackSpeedy);
+                    vids[3].url = videoPath;
+                }
+                else if (fouIs == "Sneak")
+                {
+                    videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, blackSneak);
                     vids[3].url = videoPath;
                 }
                 vids[3].Play();
@@ -143,7 +162,7 @@ public class gameFunctions : MonoBehaviour
         if (vids[3].isPlaying == false && endingOkay == true)
         {
             Debug.Log("1");
-            if (fouIs == "Smart")
+            if (fouIs == "Sneak")
             {
                 Debug.Log(2);
                 string videoPath;
@@ -190,6 +209,11 @@ public class gameFunctions : MonoBehaviour
             else if (oneIs == "Fast")
             {
                 videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, greenSpeedy);
+                vids[0].url = videoPath;
+            }
+            else if (oneIs == "Sneak")
+            {
+                videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, greenSneak);
                 vids[0].url = videoPath;
             }
             vids[0].Play();
